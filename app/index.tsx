@@ -1,5 +1,5 @@
-import { StatusBar, StyleSheet, Text, View } from 'react-native';
-import { BellRingingIcon, BookBookmarkIcon, ChatsTeardropIcon } from "phosphor-react-native";
+import { BellRingingIcon, BookBookmarkIcon, ChatsTeardropIcon, MagnifyingGlassIcon, SlidersHorizontalIcon } from "phosphor-react-native";
+import { StatusBar, StyleSheet, Text, TextInput, View } from 'react-native';
 
 export default function Index() {
   return (
@@ -14,6 +14,17 @@ export default function Index() {
           <BellRingingIcon size={30} color='#F4F4F4' weight='duotone' />
           <BookBookmarkIcon size={30} color='#F4F4F4' weight='duotone' />
         </View>
+      </View>
+      <Text style={styles.userName}>Olá João Henrique</Text>
+      <View style={styles.inputContainer}>
+        <MagnifyingGlassIcon size={30} color='#757575' weight='duotone' />
+        <TextInput
+        style={styles.input}
+          placeholder='Busque sua casa aqui'
+          placeholderTextColor='#757575'
+        />
+
+        <SlidersHorizontalIcon size={30} color='#1AB65C' weight='duotone' />
       </View>
     </View>
   );
@@ -47,4 +58,29 @@ export const styles = StyleSheet.create({
     fontSize: 24,
     fontWeight: 800
   },
+
+  userName: {
+    paddingTop: 30,
+    paddingBottom: 30,
+    color: "#F4F4F4",
+    fontSize: 25,
+    fontWeight: 800
+  },
+
+  inputContainer: {
+    width: '100%',
+    height: 56,
+    backgroundColor: '#1F222A',
+    borderRadius: 12,
+    flexDirection: 'row',
+    alignItems: 'center',
+    paddingHorizontal: 20,
+    gap: 10,
+    marginBottom: 20,
+  },
+
+  input: {
+    flex: 1,
+    color: '#F4F4F4'
+  }
 })
